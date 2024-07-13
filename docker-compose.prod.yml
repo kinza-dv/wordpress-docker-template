@@ -28,20 +28,6 @@ services:
       - db
     restart: unless-stopped
 
-  nginx:
-    build:
-      context: .
-      dockerfile: ./deploy/nginx/Dockerfile.nginx
-    command: nginx -g 'daemon off;'
-    volumes:
-      - ./deploy/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./wordpress:/var/www/html
-    depends_on:
-      - wordpress
-    networks:
-      - wordpress-network
-    restart: unless-stopped
-
   nginx_proxy_pass:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
