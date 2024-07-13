@@ -66,7 +66,7 @@ docker system prune -a
 
 ### Настройка HTTPS и SSL
 
-1. Переходим на url: "http://127.0.0.1:81"
+1. Переходим на url: "http://<host_ip>:81"
 2. Вводим почту и пароль: admin@example.com/changeme
 3. Меняем почту и пароль
 4. В параметре source указываем: приобретенный домен (если бесплатно для тестов name.<host_ip>.nip.io)
